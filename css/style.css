@@ -1,0 +1,215 @@
+/*font imported from => https://fonts.google.com/?category=Monospace*/
+ @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+body{
+	font-family: 'Roboto Mono', monospace;
+	color: #333;
+	margin:0;
+}
+
+input{
+	padding: 10px;
+	margin-top: 10px;
+}
+
+/*turns to orange the text BUY found inside the class .black*/
+.black:hover{
+	color: orange;
+}
+
+.content{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.grid-container {
+	display: flex;
+	flex-direction: row;
+	grid-gap: 40px;
+	/*background-color: green;  -  DEVELOPMENT ONLY*/
+	/*padding: 10px;*/
+}
+
+.grid-container > div {
+	text-align: center;
+	padding: 10px;
+	/*background-color: blue; -  DEVELOPMENT ONLY*/
+    /*padding: 40px 20px;
+    font-size: 30px;
+    margin-left:10px;
+    margin-right:10px;*/
+}
+
+.header{
+	display: flex;
+	background-color: black;
+	color: white;
+	height: 50px;
+	/* Puts elements far from each other 
+	justify-content: space-between;  -  DEVELOPMENT ONLY*/
+	justify-content: left;
+	align-items: center;
+	padding-left: 10px;
+}
+
+.footer{
+	display: flex;
+	background-color: black;
+	color: white;
+	height: 50px;
+	justify-content: center;
+	align-items: center;
+}
+
+/*ITEM CLASS*/
+.item{
+	display: flex;
+	flex-direction: column;
+	margin:0px;
+	padding:0px;
+	align-items: center;
+	text-align: center;
+}
+
+/*nutella picture positioning*/
+.nutella{
+	display: flex;
+	align-items: center;
+	position: absolute;
+	padding-left: 50px;
+	padding-right: 50px;
+	text-align: center;
+	height: 30px;
+	margin-top: 225px;
+	background-color: black;
+	color: white;
+	font-size: 12px;
+}
+
+/*10€ grey area*/
+.grey{
+	display: flex;
+	background-color: #DCDCDC;
+	width: 190px;
+	height: 80px;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	color: black;
+	font-weight: bold;
+}
+
+/*buy div*/
+.black{
+	display: flex;    
+	background-color: black;
+	width: 190px;
+	height: 38px;
+	color: white;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/*lightbox stylizing*/
+#id_black_overlay{
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color:rgba(118,118,118,0.7);
+}
+
+.lightbox-container{
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+}
+
+/*The layer lightbox has to be inside the ID black_overlay*/
+#id_lightbox{
+	background-color: white;
+	overflow: auto;
+}
+
+.answers{
+	display: flex;
+}
+
+.answer{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin:0px;
+	padding:0px;
+	width: 200px;
+	margin-top: 20px;
+	color: white;
+	background-color: black;
+}
+
+/*CSS media queries - Responsive behaviour*/
+@media screen and (max-width: 800px) {
+
+	.grid-container {
+		display: flex;
+		flex-direction: column;
+		grid-gap: 40px;
+		/*background-color: green;  -  DEVELOPMENT ONLY*/
+		padding: 10px;
+	}
+	.item img{
+		width: 380px;
+	  	height: 480px;
+	}
+
+	.nutella{
+	    display: flex;
+	    align-items: center;
+	    position: absolute;
+	    padding-left: 100px;
+	    padding-right: 100px;
+	    text-align: center;
+	    height: 60px;
+	    margin-top: 450px;
+	    background-color: black;
+	    color: white;
+	    font-size: 24px;
+	}
+
+	.grey{
+	    display: flex;
+	    background-color: #DCDCDC;
+	    width: 380px;
+	    height: 160px;
+	    align-items: center;
+	    justify-content: center;
+	    font-size: 28px;
+	    color: black;
+	    font-weight: bold;
+	}
+
+	.black{
+	    display: flex;    
+	    background-color: black;
+	    width: 380px;
+	    height: 76px;
+	    color: white;
+	    align-items: center;
+	    justify-content: center;
+	    font-weight: bold;
+	  	text-decoration: none;
+	  	font-size: 24px;
+	}
+
+}
